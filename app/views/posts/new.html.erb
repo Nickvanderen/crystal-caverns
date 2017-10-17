@@ -1,6 +1,16 @@
 <section id="new-post-page">
   <h2>New Post</h2>
   <%= form_for :post, url: posts_path do |f| %>
+  <% if @post.errors.any? %>
+  <aside class="errors">
+    <h3> <%= pluralize(@post.errors.count, "error")%> must be addressed before submitting</h3>
+    <ul>
+      <% @post.errors.full_messages.each do |error| %>
+      <li> <%= error %> </li>
+      <% end %>
+    </ul>
+  </aside>
+  <% end %>
     <p>
       <%= f.label :title %>
       <%= f.text_field :title %>
@@ -10,7 +20,7 @@
       <%= f.text_area :body %>
     </p>
     <p>
-      <%= f.submit "Publish" %>
+      <%= f.submit "Publish", class: 'publish' %>
     </p>
   <% end %><!-- end new post form -->
 </section><!-- end new post page -->

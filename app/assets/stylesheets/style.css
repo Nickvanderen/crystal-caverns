@@ -21,6 +21,20 @@ section {
   padding: 1.65em;
 }
 
+input {
+  display: block;
+}
+
+.publish:hover,
+.publish:focus {
+  color: pink;
+  transition: .4s;
+}
+
+textarea {
+  display: block;
+}
+
 a {
   padding: .25em;
 }
