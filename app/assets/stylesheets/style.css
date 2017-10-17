@@ -14,6 +14,11 @@ body {
   margin: 1.25em;
 }
 
+#home-page p {
+  padding-bottom: 1.45em;
+  border-bottom: 5px dashed #f4f4f4;
+}
+
 section {
   width: 65%;
   margin: 0 auto;

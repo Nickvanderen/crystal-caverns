@@ -1,0 +1,26 @@
+<section id="edit-post-page">
+  <h2>Edit Post</h2>
+  <%= form_for @post do |f| %>
+  <% if @post.errors.any? %>
+  <aside class="errors">
+    <h3> <%= pluralize(@post.errors.count, "error")%> must be addressed before submitting</h3>
+    <ul>
+      <% @post.errors.full_messages.each do |error| %>
+      <li> <%= error %> </li>
+      <% end %>
+    </ul>
+  </aside>
+  <% end %>
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+    </p>
+    <p>
+      <%= f.submit "Publish", class: 'publish' %>
+    </p>
+  <% end %><!-- end new post form -->
+</section><!-- end new post page -->
