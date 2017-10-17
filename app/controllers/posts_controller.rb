@@ -8,15 +8,18 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.save
-    redirect to @post
+
+    redirect_to @post
   end
 
   def show
     @post = Post.find(params[:id])
   end
 
+ # param is missing or the value is empty: post
+ # params.require(:post).permit(:title, :body)
   private
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.permit(:title, :body)
     end
 end
