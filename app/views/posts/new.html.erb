@@ -1,13 +1,16 @@
-<%= form_for :posts, url: posts_path do |f| %>
-  <p>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %><!-- end new post form -->
+<section id="new-post-page">
+  <h2>New Post</h2>
+  <%= form_for :posts, url: posts_path do |f| %>
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %><!-- end new post form -->
+</section><!-- end new post page -->
