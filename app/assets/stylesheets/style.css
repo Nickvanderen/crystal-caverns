@@ -5,13 +5,19 @@ body {
 }
 
 #main-nav {
-  overflow: hidden;
+  width: 60%;
+  float: right;
+}
+
+#main-nav ul {
+  margin: 0;
 }
 
 #main-nav li{
   float: left;
   list-style-type: none;
   margin: 1.25em;
+  text-align: left;
 }
 
 #home-page p {
@@ -19,7 +25,7 @@ body {
   border-bottom: 5px dashed #f4f4f4;
 }
 
-section {
+#wrapper {
   width: 65%;
   margin: 0 auto;
   border: 1px solid #f4f4f4;
