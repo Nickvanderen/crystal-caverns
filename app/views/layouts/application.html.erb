@@ -3,12 +3,21 @@
   <head>
     <title>Blog</title>
     <%= csrf_meta_tags %>
-
+    <%= stylesheet_link_tag    'style', media: 'all' %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+    <nav id="main-nav">
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", root_path %></li>
+        <li><%= link_to "New Post", root_path %></li>
+        <li><%= link_to "Settings", root_path %></li>
+        <li><%= link_to "Contact", root_path %></li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>

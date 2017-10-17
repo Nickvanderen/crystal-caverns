@@ -1,0 +1,40 @@
+/* CSS document - Nick's styles */
+body {
+  font-family: sans-serif;
+  color: #0066cc;
+}
+
+#main-nav {
+  overflow: hidden;
+}
+
+#main-nav li{
+  float: left;
+  list-style-type: none;
+  margin: 1.25em;
+}
+
+section {
+  width: 65%;
+  margin: 0 auto;
+  border: 1px solid #f4f4f4;
+  padding: 1.65em;
+}
+
+a {
+  padding: .25em;
+}
+
+a:link,
+a:visited {
+  color: #0066cc;
+  border: 1px solid #fff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #374e75;
+  transition: .7s;
+  border: 1px solid #374e75;
+}

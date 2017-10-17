@@ -3,5 +3,5 @@
   <% @posts.each do |post| %>
   <h3><%= link_to post.title, post %></h3>
   <p><%= post.created_at.strftime("%B, %d, %Y") %></p>
+  <% end %>
 </section><!-- end home page -->
-<% end %>
